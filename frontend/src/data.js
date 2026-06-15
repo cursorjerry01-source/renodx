@@ -7,7 +7,11 @@ import {
 export const ASSETS = {
   logo: "https://customer-assets.emergentagent.com/job_a59f3b8a-daf3-423b-9691-7a7a4feeef0a/artifacts/owcbqn93_logo.png",
   heroCoin: "https://customer-assets.emergentagent.com/job_a59f3b8a-daf3-423b-9691-7a7a4feeef0a/artifacts/d6o2ffxn_Logo%2Bbase.png",
-  cityBg: "https://customer-assets.emergentagent.com/job_a59f3b8a-daf3-423b-9691-7a7a4feeef0a/artifacts/mii9ftms_Background.png",
+  cityBg: "https://customer-assets.emergentagent.com/job_neon-lab-3/artifacts/d7slosck_Background.png",
+  card1: "https://customer-assets.emergentagent.com/job_neon-lab-3/artifacts/qx65kbml_card1.png",
+  card2: "https://customer-assets.emergentagent.com/job_neon-lab-3/artifacts/56mo758r_card2.png",
+  card3: "https://customer-assets.emergentagent.com/job_neon-lab-3/artifacts/ky6o7w5k_card3.png",
+  hud: "https://customer-assets.emergentagent.com/job_neon-lab-3/artifacts/dyis2awp_hud-overlays.png",
 };
 
 export const NAV_LINKS = [

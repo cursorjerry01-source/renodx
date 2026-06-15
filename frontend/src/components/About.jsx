@@ -22,6 +22,11 @@ export const About = () => {
               className="rounded-2xl w-full h-[380px] object-cover opacity-80"
             />
             <div className="absolute inset-2 rounded-2xl bg-gradient-to-tr from-[#05010D]/60 via-transparent to-[#B026FF]/20" />
+            <img
+              src={ASSETS.hud}
+              alt=""
+              className="pointer-events-none absolute inset-0 h-full w-full object-contain mix-blend-screen opacity-90"
+            />
           </div>
           <div className="absolute -bottom-6 -right-4 glass-strong rounded-2xl px-6 py-4 glow-md hidden sm:block">
             <div className="font-display font-extrabold text-2xl text-gradient">+5 anos</div>

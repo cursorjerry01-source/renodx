@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Zap, ArrowRight, Code2 } from "lucide-react";
+import { Zap, ArrowRight } from "lucide-react";
 import { STATS, ASSETS } from "../data";
 import { Reveal } from "./Reveal";
 
@@ -73,21 +73,28 @@ export const Hero = () => {
             animate={{ y: [0, -16, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           />
-          {/* Floating code panels */}
-          <motion.div
-            className="absolute top-10 left-2 lg:left-6 glass rounded-xl p-3 glow-sm hidden sm:block"
-            animate={{ y: [0, 14, 0] }}
+          {/* Floating neon code panels */}
+          <motion.img
+            src={ASSETS.card1}
+            alt=""
+            className="absolute -top-2 left-0 lg:-left-8 w-28 lg:w-44 mix-blend-screen drop-shadow-[0_0_25px_rgba(176,38,255,0.5)] hidden sm:block"
+            animate={{ y: [0, 16, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Code2 size={22} className="text-[#E35BFF]" />
-          </motion.div>
-          <motion.div
-            className="absolute bottom-16 right-0 lg:right-4 glass rounded-xl px-4 py-3 glow-sm hidden sm:block"
-            animate={{ y: [0, -14, 0] }}
+          />
+          <motion.img
+            src={ASSETS.card2}
+            alt=""
+            className="absolute bottom-8 -right-2 lg:-right-10 w-28 lg:w-44 mix-blend-screen drop-shadow-[0_0_25px_rgba(176,38,255,0.5)] hidden sm:block"
+            animate={{ y: [0, -16, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <span className="font-display text-sm text-secondary">&lt;/&gt;</span>
-          </motion.div>
+          />
+          <motion.img
+            src={ASSETS.card3}
+            alt=""
+            className="absolute top-1/3 -right-4 lg:-right-16 w-20 lg:w-32 mix-blend-screen drop-shadow-[0_0_25px_rgba(214,70,255,0.55)] hidden md:block"
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
+          />
         </Reveal>
       </div>
     </section>
