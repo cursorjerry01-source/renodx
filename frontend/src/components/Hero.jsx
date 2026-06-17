@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Zap, ArrowRight } from "lucide-react";
 import { STATS, ASSETS } from "../data";
 import { Reveal } from "./Reveal";
+import { Logo3D } from "./Logo3D";
 
 export const Hero = () => {
   return (
@@ -63,35 +64,29 @@ export const Hero = () => {
           </Reveal>
         </div>
 
-        {/* Right hero image */}
+        {/* Right hero image — interactive 3D logo */}
         <Reveal dir="scale" delay={0.2} className="relative flex justify-center">
           <div className="pointer-events-none absolute inset-0 m-auto h-[70%] w-[70%] rounded-full bg-[#B026FF]/25 blur-[90px]" />
-          <motion.img
-            src={ASSETS.heroCoin}
-            alt="SYSTEM O-JDEV 3D"
-            className="relative w-[78%] sm:w-[62%] lg:w-[92%] max-w-lg drop-shadow-[0_0_45px_rgba(176,38,255,0.55)]"
-            animate={{ y: [0, -16, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          />
+          <Logo3D className="relative z-10 w-full h-[420px] sm:h-[480px] lg:h-[560px] cursor-grab active:cursor-grabbing" />
           {/* Floating neon code panels */}
           <motion.img
             src={ASSETS.card1}
             alt=""
-            className="absolute -top-2 left-0 lg:-left-8 w-28 lg:w-44 mix-blend-screen drop-shadow-[0_0_25px_rgba(176,38,255,0.5)] hidden sm:block"
+            className="absolute -top-2 left-0 lg:-left-8 w-28 lg:w-44 mix-blend-screen drop-shadow-[0_0_25px_rgba(176,38,255,0.5)] hidden sm:block pointer-events-none z-20"
             animate={{ y: [0, 16, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.img
             src={ASSETS.card2}
             alt=""
-            className="absolute bottom-8 -right-2 lg:-right-10 w-28 lg:w-44 mix-blend-screen drop-shadow-[0_0_25px_rgba(176,38,255,0.5)] hidden sm:block"
+            className="absolute bottom-8 -right-2 lg:-right-10 w-28 lg:w-44 mix-blend-screen drop-shadow-[0_0_25px_rgba(176,38,255,0.5)] hidden sm:block pointer-events-none z-20"
             animate={{ y: [0, -16, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.img
             src={ASSETS.card3}
             alt=""
-            className="absolute top-1/3 -right-4 lg:-right-16 w-20 lg:w-32 mix-blend-screen drop-shadow-[0_0_25px_rgba(214,70,255,0.55)] hidden md:block"
+            className="absolute top-1/3 -right-4 lg:-right-16 w-20 lg:w-32 mix-blend-screen drop-shadow-[0_0_25px_rgba(214,70,255,0.55)] hidden md:block pointer-events-none z-20"
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
           />
