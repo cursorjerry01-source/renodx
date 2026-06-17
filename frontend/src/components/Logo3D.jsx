@@ -46,13 +46,13 @@ export const Logo3D = ({ className = "" }) => {
     // --- Scene / camera / renderer ---
     const scene = new THREE.Scene(); // transparent
     const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
-    camera.position.set(0, 5, 15);
+    camera.position.set(0, 2.4, 11); // frontal framing → coin renders as a clean circle
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(w, h);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.25;
+    renderer.toneMappingExposure = 1.3;
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     container.appendChild(renderer.domElement);
     renderer.domElement.style.outline = "none";
@@ -62,17 +62,23 @@ export const Logo3D = ({ className = "" }) => {
     controls.dampingFactor = 0.05;
     controls.enableZoom = false; // keep page scroll working
     controls.enablePan = false;
-    controls.maxPolarAngle = Math.PI / 2 + 0.1;
-    controls.target.set(0, 2, 0);
+    controls.minPolarAngle = Math.PI / 2 - 0.55;
+    controls.maxPolarAngle = Math.PI / 2 + 0.25;
+    controls.target.set(0, 2.4, 0);
 
     // --- Lighting ---
-    scene.add(new THREE.AmbientLight(0xffffff, 0.55));
+    scene.add(new THREE.AmbientLight(0xffffff, 0.85));
 
-    const dirLight = new THREE.DirectionalLight(0xffffff, 1.3);
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1.4);
     dirLight.position.set(5, 10, 7);
     scene.add(dirLight);
 
-    const purpleLight1 = new THREE.PointLight(PRIMARY, 3.2, 18);
+    // Front fill so the logo face stays bright and legible
+    const fillLight = new THREE.DirectionalLight(0xffffff, 1.1);
+    fillLight.position.set(0, 2.5, 10);
+    scene.add(fillLight);
+
+    const purpleLight1 = new THREE.PointLight(PRIMARY, 3.4, 18);
     purpleLight1.position.set(0, 2.5, 4);
     scene.add(purpleLight1);
 
@@ -81,7 +87,7 @@ export const Logo3D = ({ className = "" }) => {
     scene.add(purpleLight2);
 
     // Magenta rim light from behind for the cyber edge glow
-    const rimLight = new THREE.PointLight(SECONDARY, 2.4, 20);
+    const rimLight = new THREE.PointLight(SECONDARY, 2.6, 20);
     rimLight.position.set(-4, 4, -6);
     scene.add(rimLight);
 
@@ -105,7 +111,7 @@ export const Logo3D = ({ className = "" }) => {
       new THREE.MeshStandardMaterial({ color: 0x120020, metalness: 0.95, roughness: 0.25, emissive: 0x250042, emissiveIntensity: 0.4 })
     );
     const faceMaterial = track(
-      new THREE.MeshStandardMaterial({ map: logoTexture, roughness: 0.32, metalness: 0.18, emissive: 0x3a0a55, emissiveIntensity: 0.45 })
+      new THREE.MeshStandardMaterial({ map: logoTexture, roughness: 0.32, metalness: 0.18, emissive: 0x5a1580, emissiveIntensity: 0.65 })
     );
 
     // --- Build logo + pedestal ---
@@ -223,18 +229,33 @@ export const Logo3D = ({ className = "" }) => {
 
     // --- Animation ---
     let frameId;
+    let lastW = w;
+    let lastH = h;
     const clock = new THREE.Clock();
     const animate = () => {
       frameId = requestAnimationFrame(animate);
+
+      // Bulletproof aspect handling — prevents the coin from looking stretched/oval
+      const cw = container.clientWidth;
+      const ch = container.clientHeight;
+      if ((cw !== lastW || ch !== lastH) && cw > 0 && ch > 0) {
+        lastW = cw;
+        lastH = ch;
+        camera.aspect = cw / ch;
+        camera.updateProjectionMatrix();
+        renderer.setSize(cw, ch);
+      }
+
       const t = clock.getElapsedTime();
 
       grupoLogoCompleto.rotation.y += 0.003;
+      grupoLogoCompleto.position.y = Math.sin(t * 1.2) * 0.18; // gentle floating
       hudRing.rotation.z += 0.02;
       particles.rotation.y += 0.0007;
 
       const pulse = Math.sin(t * 3);
       neonGlowMaterial.emissiveIntensity = 2.6 + pulse * 0.6;
-      purpleLight1.intensity = 3.2 + pulse * 0.5;
+      purpleLight1.intensity = 3.4 + pulse * 0.5;
       halo.material.opacity = 0.78 + Math.sin(t * 2) * 0.12;
       halo.scale.setScalar(13 + Math.sin(t * 2) * 0.5);
 
@@ -244,13 +265,15 @@ export const Logo3D = ({ className = "" }) => {
     animate();
 
     // --- Responsiveness within the container ---
-    const onResize = () => {
-      const { w: nw, h: nh } = getSize();
-      camera.aspect = nw / nh;
-      camera.updateProjectionMatrix();
-      renderer.setSize(nw, nh);
-    };
-    const ro = new ResizeObserver(onResize);
+    const ro = new ResizeObserver(() => {
+      const cw = container.clientWidth;
+      const ch = container.clientHeight;
+      if (cw > 0 && ch > 0) {
+        camera.aspect = cw / ch;
+        camera.updateProjectionMatrix();
+        renderer.setSize(cw, ch);
+      }
+    });
     ro.observe(container);
 
     // --- Cleanup ---
