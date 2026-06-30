@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Zap, ArrowRight } from "lucide-react";
 import { STATS, ASSETS } from "../data";
 import { Reveal } from "./Reveal";
-import { Logo3D } from "./Logo3D";
 
 export const Hero = () => {
   return (
@@ -64,10 +63,16 @@ export const Hero = () => {
           </Reveal>
         </div>
 
-        {/* Right hero image — interactive 3D logo */}
+        {/* Right hero image */}
         <Reveal dir="scale" delay={0.2} className="relative flex justify-center">
           <div className="pointer-events-none absolute inset-0 m-auto h-[70%] w-[70%] rounded-full bg-[#B026FF]/25 blur-[90px]" />
-          <Logo3D className="relative z-10 w-full h-[420px] sm:h-[480px] lg:h-[560px] cursor-grab active:cursor-grabbing" />
+          <motion.img
+            src={ASSETS.heroCoin}
+            alt="SYSTEM O-JDEV 3D"
+            className="relative z-10 w-[78%] sm:w-[62%] lg:w-[92%] max-w-lg drop-shadow-[0_0_45px_rgba(176,38,255,0.55)]"
+            animate={{ y: [0, -16, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          />
           {/* Floating neon code panels */}
           <motion.img
             src={ASSETS.card1}
