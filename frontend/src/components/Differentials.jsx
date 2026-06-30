@@ -14,7 +14,7 @@ export const Differentials = () => {
             return (
               <Reveal key={d.title} dir="up" delay={i * 0.08}>
                 <div data-testid="differential-card" className="glass card-hover rounded-2xl p-7 h-full text-center group">
-                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(176,38,255,0.12)] border border-[rgba(176,38,255,0.3)] glow-sm group-hover:scale-110 transition-transform duration-300">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(176,38,255,0.12)] border border-[rgba(176,38,255,0.3)] glow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                     <Icon size={26} className="text-[#E35BFF]" />
                   </div>
                   <h3 className="font-display font-bold text-lg text-white mt-5">{d.title}</h3>

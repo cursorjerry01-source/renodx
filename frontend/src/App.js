@@ -1,5 +1,6 @@
 import "@/App.css";
 import { Toaster } from "sonner";
+import { CursorGlow } from "@/components/CursorGlow";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { TechMarquee } from "@/components/TechMarquee";
@@ -14,7 +15,8 @@ import { Footer } from "@/components/Footer";
 
 function App() {
   return (
-    <div className="App min-h-screen bg-[#05010D] text-white antialiased overflow-x-hidden">
+    <div className="App min-h-screen text-white antialiased overflow-x-hidden">
+      <CursorGlow />
       <Toaster position="top-right" theme="dark" richColors />
       <Navbar />
       <main>

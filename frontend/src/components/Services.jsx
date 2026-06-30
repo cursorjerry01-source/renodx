@@ -27,7 +27,7 @@ export const Services = () => {
             return (
               <Reveal key={s.title} dir="up" delay={i * 0.08}>
                 <div data-testid="service-card" className="glass card-hover rounded-2xl p-7 h-full group">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[rgba(176,38,255,0.12)] border border-[rgba(176,38,255,0.3)] glow-sm group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[rgba(176,38,255,0.12)] border border-[rgba(176,38,255,0.3)] glow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                     <Icon size={26} className="text-[#E35BFF]" />
                   </div>
                   <h3 className="font-display font-bold text-xl text-white mt-6">{s.title}</h3>

@@ -12,9 +12,35 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[#05010D] via-[#05010D]/85 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#05010D]/70 via-transparent to-[#05010D]" />
       </div>
+      {/* Aurora layer */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="animate-aurora absolute -top-1/3 left-1/4 h-[55rem] w-[55rem] rounded-full bg-[#B026FF]/15 blur-[150px]" />
+        <div className="animate-aurora absolute top-1/4 right-0 h-[40rem] w-[40rem] rounded-full bg-[#E35BFF]/12 blur-[140px]" style={{ animationDelay: "-6s" }} />
+      </div>
+      {/* Animated grid */}
+      <div className="grid-animated pointer-events-none absolute inset-0 -z-10 opacity-60" />
       {/* Ambient glows */}
       <div className="pointer-events-none absolute -top-20 -left-20 h-96 w-96 rounded-full bg-[#B026FF]/20 blur-[120px]" />
       <div className="pointer-events-none absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-[#E35BFF]/15 blur-[120px]" />
+      {/* Floating particles */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        {[
+          { l: "12%", t: "22%", s: 6, d: "0s" },
+          { l: "30%", t: "70%", s: 4, d: "1.2s" },
+          { l: "62%", t: "18%", s: 5, d: "2.1s" },
+          { l: "78%", t: "60%", s: 7, d: "0.6s" },
+          { l: "45%", t: "40%", s: 3, d: "3s" },
+          { l: "88%", t: "30%", s: 4, d: "1.8s" },
+          { l: "20%", t: "48%", s: 5, d: "2.6s" },
+          { l: "70%", t: "82%", s: 4, d: "0.9s" },
+        ].map((p, i) => (
+          <span
+            key={i}
+            className="animate-twinkle absolute rounded-full bg-[#D646FF]"
+            style={{ left: p.l, top: p.t, width: p.s, height: p.s, animationDelay: p.d, boxShadow: "0 0 12px rgba(214,70,255,0.8)" }}
+          />
+        ))}
+      </div>
 
       <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left copy */}
@@ -26,7 +52,7 @@ export const Hero = () => {
           </Reveal>
 
           <Reveal dir="left" delay={0.1}>
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mt-6 text-white">
+            <h1 className="font-display font-black text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight mt-6 text-white">
               Transformamos ideias em{" "}
               <span className="text-gradient text-glow">sistemas poderosos</span> e{" "}
               <span className="text-gradient text-glow">experiências incríveis</span>.
@@ -34,7 +60,7 @@ export const Hero = () => {
           </Reveal>
 
           <Reveal dir="left" delay={0.2}>
-            <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
+            <p className="mt-6 text-base md:text-lg text-white/75 max-w-xl leading-relaxed">
               Desenvolvimento de soluções digitais personalizadas com tecnologia, performance e inovação.
             </p>
           </Reveal>
