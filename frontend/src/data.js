@@ -113,8 +113,8 @@ export const PROCESS = [
 ];
 
 export const CONTACT_INFO = {
-  whatsapp: "https://wa.me/5500000000000",
-  whatsappLabel: "(00) 00000-0000",
+  whatsapp: "https://wa.me/5532999500769",
+  whatsappLabel: "(32) 99950-0769",
   email: "contato@systemojdev.com",
   instagram: "https://instagram.com/systemojdev",
   instagramLabel: "@systemojdev",
