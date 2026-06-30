@@ -42,14 +42,61 @@ export const SERVICES = [
   { icon: Server, title: "Hospedagem", desc: "Infraestrutura completa, segura e escalável na nuvem." },
 ];
 
+const shot = (url) => `https://image.thum.io/get/width/800/crop/620/noanimate/${url}`;
+
 export const PORTFOLIO = [
-  { title: "Plataforma SaaS", category: "Sistema Web", image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80" },
-  { title: "Dashboard Analytics", category: "Sistema Web", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80" },
-  { title: "Assistente de IA", category: "Inteligência Artificial", image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&q=80" },
-  { title: "Automação de Vendas", category: "Automação", image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&q=80" },
-  { title: "Loja Digital", category: "Landing Page", image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=900&q=80" },
-  { title: "Cloud Infrastructure", category: "Hospedagem", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80" },
+  {
+    title: "Calculadora de Perda Óptica",
+    category: "Redes FTTH",
+    link: "https://calculadora-sinal-fibra.vercel.app/",
+    image: shot("https://calculadora-sinal-fibra.vercel.app/"),
+  },
+  {
+    title: "Sistema de Relatórios",
+    category: "Gestão de Ordens de Serviço",
+    link: "https://imicro-relatorio.vercel.app/",
+    image: shot("https://imicro-relatorio.vercel.app/"),
+  },
+  {
+    title: "Projeto Almanaque",
+    category: "Análise e Monitoramento",
+    link: "https://noc-top-unm2000.vercel.app/",
+    image: shot("https://noc-top-unm2000.vercel.app/"),
+  },
+  {
+    title: "Bifrost Protocol v1.0",
+    category: "Firmware • IMICRO",
+    link: "https://imicro-firmware.vercel.app/",
+    image: shot("https://imicro-firmware.vercel.app/"),
+  },
+  {
+    title: "Organizador de Endereços",
+    category: "Automação",
+    link: "https://endereco-organizador.vercel.app/",
+    image: shot("https://endereco-organizador.vercel.app/"),
+  },
+  {
+    title: "UTM para Lat/Long",
+    category: "Conversor • Zona 23S",
+    link: "https://um-ttolatitudelongitude.vercel.app/",
+    image: shot("https://um-ttolatitudelongitude.vercel.app/"),
+  },
+  {
+    title: "Planos e Serviços",
+    category: "Tabela Comercial",
+    link: "https://pre-o-tabela-servi-os.vercel.app/",
+    image: shot("https://pre-o-tabela-servi-os.vercel.app/"),
+  },
+  {
+    title: "Controle de Estoque Imicro",
+    category: "Gestão de Inventário",
+    link: "https://controle-estoque-new.lovable.app/login",
+    image: shot("https://controle-estoque-new.lovable.app/login"),
+  },
 ];
+
+// Fallback thumbnail if a live screenshot fails to load
+export const PORTFOLIO_FALLBACK = "https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80";
 
 export const DIFFERENTIALS = [
   { icon: Zap, title: "Velocidade", desc: "Performance extrema com carregamento instantâneo." },
