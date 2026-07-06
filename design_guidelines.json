@@ -1,0 +1,80 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 7 & 5 Blend: Cyber Luxury (Neon + High-End)",
+  "domain": "Premium Software House",
+  "colors": {
+    "background": "#030008",
+    "surface": "rgba(20, 10, 30, 0.4)",
+    "surface_glass": "rgba(176, 38, 255, 0.05)",
+    "primary_neon": "#B026FF",
+    "secondary_neon": "#E35BFF",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A19BB0",
+    "border_subtle": "rgba(255, 255, 255, 0.08)",
+    "border_glow": "rgba(176, 38, 255, 0.3)"
+  },
+  "typography": {
+    "imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;800;900&display=swap');",
+      "@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');",
+      "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');"
+    ],
+    "font_families": {
+      "heading": "Unbounded, sans-serif",
+      "body": "Outfit, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "hierarchy": {
+      "h1": "font-['Unbounded'] text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-none text-white drop-shadow-lg",
+      "h2": "font-['Unbounded'] text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white",
+      "h3": "font-['Unbounded'] text-xl sm:text-2xl font-semibold tracking-tight text-white",
+      "body": "font-['Outfit'] text-base md:text-lg font-light text-[#A19BB0] leading-relaxed",
+      "eyebrow": "font-['JetBrains_Mono'] text-xs sm:text-sm uppercase tracking-[0.2em] text-[#E35BFF] font-bold",
+      "button": "font-['Outfit'] text-sm uppercase tracking-widest font-semibold"
+    }
+  },
+  "layout_spacing": {
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8",
+    "glass_card": "relative overflow-hidden rounded-2xl bg-[#140A1E]/40 backdrop-blur-xl border border-white/10 p-8 shadow-[0_8px_32px_rgba(176,38,255,0.05)]",
+    "alignment": "Mobile-first responsive. Left-align for dense data, center-align for hero and major section titles."
+  },
+  "animations_and_interactions": {
+    "loader": "Implement a custom full-screen loader with background #030008. Use Framer Motion to draw the 'SYSTEM O-JDEV' logo using an SVG path animation in #B026FF, followed by a neon glow reveal, before fading out via AnimatePresence.",
+    "buttons": "Create a custom RippleButton component. On click, a circular ripple spans out. On hover, increase inner glow and slightly lift (-translate-y-1). Active state should use scale-95.",
+    "portfolio_cards": "Premium Hover State: Apply overflow-hidden to image container. On group-hover, scale the image to scale-110 with a smooth 0.5s transition. Overlay a glassmorphic gradient bg-gradient-to-tr from-[#B026FF]/50 to-transparent that fades in, and slide up a 'View Project' badge/button.",
+    "scroll": "Utilize Lenis for smooth scrolling momentum. Add Framer Motion staggered reveals (opacity: 0, y: 30 to opacity: 1, y: 0) for bento grid children.",
+    "cursor": "Maintain neon glow cursor. Add a scale effect when hovering over interactive elements (buttons, links)."
+  },
+  "components": {
+    "hero": "Center-aligned H1. Integrate existing 3D coin. Overlay subtle noise texture (bg-noise) on the hero background to enhance luxury feel.",
+    "stats": "Counter components using framer-motion useInView. Typography: Unbounded, text-4xl or 5xl, text-[#E35BFF].",
+    "tech_marquee": "Kinetic Texture approach. Extremely slow, smooth drift using react-fast-marquee. Low-contrast monochrome items (e.g., text-white/20) in JetBrains Mono.",
+    "service_cards": "Bento grid layout. Glassmorphism surfaces. Animated borders on hover.",
+    "portfolio": "Grid layout. Thum.io screenshots. Sharp borders (border-white/10), rounded-xl.",
+    "differentials_process": "Vertical timeline or 4-step horizontal bento layout with glowing connector lines.",
+    "contact_form": "Shadcn UI customized. Deep dark inputs (bg-white/5), focus rings using #B026FF. Integration with FastAPI.",
+    "cta": "Massive premium banner. Gradient text for the headline bg-clip-text text-transparent bg-gradient-to-r from-[#B026FF] to-[#E35BFF]."
+  },
+  "media": {
+    "image_urls": [],
+    "notes": "Project thumbnails generated via thum.io. Neon 3D coin provided by client."
+  },
+  "testing": {
+    "attributes": [
+      "data-testid='hero-cta'",
+      "data-testid='contact-form'",
+      "data-testid='portfolio-card'"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Replace Inter and Space Grotesk with Unbounded, Outfit, and JetBrains Mono.",
+    "Add the provided fonts to tailwind.config.js.",
+    "Implement the custom loader using Framer Motion before mounting the main application.",
+    "Build the Button component with the specified click ripple and glow hover states.",
+    "Refine the portfolio cards to feature the high-end hover scaling and glassmorphic sheen overlay.",
+    "Ensure the neon cursor glow remains above the DOM but doesn't block clicks (pointer-events-none).",
+    "Ensure all interactive elements have data-testid attributes."
+  ]
+}
