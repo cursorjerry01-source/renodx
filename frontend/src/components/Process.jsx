@@ -13,9 +13,9 @@ export const Process = () => {
             <div key={p.step} className="flex items-center gap-3">
               <Reveal dir="up" delay={i * 0.1} className="flex-1">
                 <div data-testid="process-step" className="glass card-hover rounded-2xl p-7 h-full">
-                  <div className="font-display font-extrabold text-4xl text-gradient">{p.step}</div>
-                  <h3 className="font-display font-bold text-lg text-white mt-3">{p.title}</h3>
-                  <p className="text-muted-foreground mt-2 text-sm leading-relaxed">{p.desc}</p>
+                  <div className="font-display font-extrabold text-3xl lg:text-4xl text-gradient">{p.step}</div>
+                  <h3 className="font-display font-semibold text-base lg:text-lg leading-snug text-white mt-3">{p.title}</h3>
+                  <p className="text-muted-foreground mt-2 text-sm font-light leading-relaxed">{p.desc}</p>
                 </div>
               </Reveal>
               {i < PROCESS.length - 1 && (

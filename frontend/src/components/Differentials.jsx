@@ -17,8 +17,8 @@ export const Differentials = () => {
                   <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(176,38,255,0.12)] border border-[rgba(176,38,255,0.3)] glow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                     <Icon size={26} className="text-[#E35BFF]" />
                   </div>
-                  <h3 className="font-display font-bold text-lg text-white mt-5">{d.title}</h3>
-                  <p className="text-muted-foreground mt-2 text-sm leading-relaxed">{d.desc}</p>
+                  <h3 className="font-display font-semibold text-base lg:text-lg leading-snug text-white mt-5">{d.title}</h3>
+                  <p className="text-muted-foreground mt-2 text-sm font-light leading-relaxed">{d.desc}</p>
                 </div>
               </Reveal>
             );

@@ -46,13 +46,13 @@ export const Hero = () => {
         {/* Left copy */}
         <div>
           <Reveal dir="left">
-            <span className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-xs md:text-sm font-medium text-secondary glow-sm">
+            <span className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 font-mono-tech text-[10px] md:text-xs uppercase tracking-[0.2em] font-medium text-secondary glow-sm">
               <Zap size={15} className="text-[#E35BFF]" /> Desenvolvimento de Alto Impacto
             </span>
           </Reveal>
 
           <Reveal dir="left" delay={0.1}>
-            <h1 className="font-display font-black text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight mt-6 text-white">
+            <h1 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-[1.14] tracking-tight mt-6 text-white">
               Transformamos ideias em{" "}
               <span className="text-gradient text-glow">sistemas poderosos</span> e{" "}
               <span className="text-gradient text-glow">experiências incríveis</span>.
@@ -60,7 +60,7 @@ export const Hero = () => {
           </Reveal>
 
           <Reveal dir="left" delay={0.2}>
-            <p className="mt-6 text-base md:text-lg text-white/75 max-w-xl leading-relaxed">
+            <p className="mt-6 text-base md:text-lg font-light text-white/75 max-w-xl leading-relaxed">
               Desenvolvimento de soluções digitais personalizadas com tecnologia, performance e inovação.
             </p>
           </Reveal>
@@ -81,8 +81,8 @@ export const Hero = () => {
             <div className="mt-14 grid grid-cols-3 gap-4 max-w-xl">
               {STATS.map((s) => (
                 <div key={s.label} data-testid="stat-card" className="glass card-hover rounded-2xl p-4 lg:p-5">
-                  <div className="font-display font-extrabold text-2xl lg:text-3xl text-gradient">{s.value}</div>
-                  <div className="text-[11px] lg:text-xs text-muted-foreground mt-1">{s.label}</div>
+                  <div className="font-display font-bold text-xl lg:text-2xl text-gradient">{s.value}</div>
+                  <div className="font-mono-tech uppercase tracking-wide text-[9px] lg:text-[10px] text-muted-foreground mt-2">{s.label}</div>
                 </div>
               ))}
             </div>

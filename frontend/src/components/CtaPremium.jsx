@@ -15,16 +15,16 @@ export const CtaPremium = () => {
           >
             <div className="pointer-events-none absolute inset-0 grid-floor opacity-30" />
             <div className="relative">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-medium text-white backdrop-blur">
-                <Sparkles size={16} /> Vamos começar
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 font-mono-tech text-xs uppercase tracking-[0.15em] font-medium text-white backdrop-blur">
+                <Sparkles size={14} /> Vamos começar
               </span>
-              <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mt-6 max-w-3xl mx-auto leading-tight">
+              <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl tracking-tight text-white mt-6 max-w-3xl mx-auto leading-snug">
                 Pronto para transformar sua ideia em realidade?
               </h2>
               <a
                 href="#contato"
                 data-testid="cta-quote-btn"
-                className="mt-9 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-semibold text-[#1a0533] hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.6)] transition-all duration-300"
+                className="ripple relative overflow-hidden mt-9 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold uppercase tracking-wider text-[#1a0533] hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.6)] transition-all duration-300"
               >
                 Solicitar Orçamento <ArrowRight size={18} />
               </a>

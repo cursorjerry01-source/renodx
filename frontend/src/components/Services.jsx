@@ -4,9 +4,13 @@ import { Reveal } from "./Reveal";
 const SectionHeading = ({ kicker, title, subtitle }) => (
   <div className="text-center max-w-2xl mx-auto mb-14">
     <Reveal>
-      <span className="text-xs uppercase tracking-[0.3em] text-secondary font-semibold">{kicker}</span>
-      <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mt-3">{title}</h2>
-      {subtitle && <p className="text-muted-foreground mt-4 text-base md:text-lg">{subtitle}</p>}
+      <span className="eyebrow inline-flex items-center gap-3">
+        <span className="eyebrow-line" />
+        {kicker}
+        <span className="eyebrow-line" />
+      </span>
+      <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl tracking-tight text-white mt-4">{title}</h2>
+      {subtitle && <p className="text-muted-foreground mt-4 text-base md:text-lg font-light">{subtitle}</p>}
     </Reveal>
   </div>
 );
@@ -30,8 +34,8 @@ export const Services = () => {
                   <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[rgba(176,38,255,0.12)] border border-[rgba(176,38,255,0.3)] glow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                     <Icon size={26} className="text-[#E35BFF]" />
                   </div>
-                  <h3 className="font-display font-bold text-xl text-white mt-6">{s.title}</h3>
-                  <p className="text-muted-foreground mt-3 leading-relaxed">{s.desc}</p>
+                  <h3 className="font-display font-semibold text-base lg:text-lg leading-snug text-white mt-6">{s.title}</h3>
+                  <p className="text-muted-foreground mt-3 font-light leading-relaxed">{s.desc}</p>
                 </div>
               </Reveal>
             );

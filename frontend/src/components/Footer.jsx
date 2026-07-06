@@ -18,8 +18,8 @@ export const Footer = () => {
             <div className="flex items-center gap-3">
               <img src={ASSETS.logo} alt="SYSTEM O-JDEV" className="h-11 w-11 rounded-full object-cover glow-sm" />
               <div>
-                <div className="font-display font-extrabold text-white">SYSTEM O-JDEV</div>
-                <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Soluções Digitais</div>
+                <div className="font-display font-bold text-sm text-white tracking-wide">SYSTEM O-JDEV</div>
+                <div className="font-mono-tech text-[9px] uppercase tracking-[0.25em] text-muted-foreground">Soluções Digitais</div>
               </div>
             </div>
             <p className="text-muted-foreground mt-5 text-sm leading-relaxed max-w-xs">
@@ -28,7 +28,7 @@ export const Footer = () => {
           </div>
 
           <div className="md:justify-self-center">
-            <h4 className="font-display font-bold text-white mb-4">Links Rápidos</h4>
+            <h4 className="font-display font-semibold text-sm tracking-wide text-white mb-4">Links Rápidos</h4>
             <ul className="space-y-3">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
@@ -41,7 +41,7 @@ export const Footer = () => {
           </div>
 
           <div className="md:justify-self-end">
-            <h4 className="font-display font-bold text-white mb-4">Redes Sociais</h4>
+            <h4 className="font-display font-semibold text-sm tracking-wide text-white mb-4">Redes Sociais</h4>
             <div className="flex gap-3">
               {socials.map((s, i) => {
                 const Icon = s.icon;

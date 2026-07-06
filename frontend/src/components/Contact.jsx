@@ -44,9 +44,13 @@ export const Contact = () => {
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <Reveal>
-            <span className="text-xs uppercase tracking-[0.3em] text-secondary font-semibold">Fale conosco</span>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mt-3">Contato</h2>
-            <p className="text-muted-foreground mt-4 text-base md:text-lg">
+            <span className="eyebrow inline-flex items-center gap-3">
+              <span className="eyebrow-line" />
+              Fale conosco
+              <span className="eyebrow-line" />
+            </span>
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl tracking-tight text-white mt-4">Contato</h2>
+            <p className="text-muted-foreground mt-4 text-base md:text-lg font-light">
               Conte sobre o seu projeto. Vamos transformar sua ideia em realidade.
             </p>
           </Reveal>

@@ -23,8 +23,8 @@ export const Navbar = () => {
         <a href="#inicio" data-testid="logo-link" className="flex items-center gap-3 group">
           <img src={ASSETS.logo} alt="SYSTEM O-JDEV" className="h-10 w-10 rounded-full object-cover glow-sm group-hover:scale-105 transition-transform duration-300" />
           <div className="leading-tight">
-            <div className="font-display font-extrabold text-white tracking-wide text-sm md:text-base">SYSTEM O-JDEV</div>
-            <div className="text-[10px] md:text-xs uppercase tracking-[0.25em] text-muted-foreground">Soluções Digitais</div>
+            <div className="font-display font-bold text-white tracking-wide text-[13px] md:text-sm">SYSTEM O-JDEV</div>
+            <div className="font-mono-tech text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Soluções Digitais</div>
           </div>
         </a>
 

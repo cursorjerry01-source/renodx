@@ -29,18 +29,21 @@ export const About = () => {
             />
           </div>
           <div className="absolute -bottom-6 -right-4 glass-strong rounded-2xl px-6 py-4 glow-md hidden sm:block">
-            <div className="font-display font-extrabold text-2xl text-gradient">+5 anos</div>
-            <div className="text-xs text-muted-foreground">de experiência digital</div>
+            <div className="font-display font-bold text-xl text-gradient">+5 anos</div>
+            <div className="font-mono-tech text-[10px] uppercase tracking-wide text-muted-foreground mt-1">de experiência digital</div>
           </div>
         </Reveal>
 
         <div>
           <Reveal dir="right">
-            <span className="text-xs uppercase tracking-[0.3em] text-secondary font-semibold">Quem Somos</span>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mt-3">
+            <span className="eyebrow inline-flex items-center gap-3">
+              <span className="eyebrow-line" />
+              Quem Somos
+            </span>
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl tracking-tight text-white mt-4">
               Inovação que move <span className="text-gradient">o seu negócio</span>
             </h2>
-            <p className="text-muted-foreground mt-6 text-base md:text-lg leading-relaxed">
+            <p className="text-muted-foreground mt-6 text-base md:text-lg font-light leading-relaxed">
               A SYSTEM O-JDEV desenvolve soluções digitais modernas para empresas que desejam crescer através
               da tecnologia. Unimos design premium, performance e inovação para entregar experiências memoráveis.
             </p>
